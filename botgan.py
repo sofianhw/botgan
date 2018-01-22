@@ -49,8 +49,8 @@ DEFAULT_EXCUSES = [
 
 
 def kaskus_search(keywords):
-    archive_url = 'http://archive.kaskus.co.id/search'
-    page = urllib.urlopen(archive_url, urllib.urlencode({'q':keywords}))
+    archive_url = 'https://www.kaskus.co.id/search/forum?'
+    page = urllib.urlopen(archive_url+urllib.urlencode({'q':keywords}))
     links = []
     for link in BeautifulSoup(page, parseOnlyThese=SoupStrainer('a')):
         if link.has_key('href'):
@@ -65,7 +65,7 @@ def get_comments(url):
     comments = []
     for comment in BeautifulSoup(page, 
                                  parseOnlyThese=SoupStrainer(
-                                    'div', {'class':'pagetext'}
+                                    'div', {'class':'entry'}
                                  )):
         for quote in comment.findAll('div'):
             quote.extract()
