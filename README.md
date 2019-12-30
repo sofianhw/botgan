@@ -20,7 +20,7 @@ From the command-line:
 	> Hi apa kabar?
 	pertamax aman gak nih ?? jah kduluan !! wkwkww
 	> gak tau deh, emang penting ya?
-	sundul lagi	
+	sundul lagi	gan
 
 License
 -------
